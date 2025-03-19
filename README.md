@@ -19,3 +19,47 @@ A Processing sketch that reacts to microphone input by dynamically resizing and 
   ```java
 import controlP5.*; // For ControlP5
 import ddf.minim.*; // For Minim
+```
+<I><b><h3>How to Modify the Code:</h3></b></i>
+Change the default text
+Edit this line in setup():
+
+ ```java
+String displayText = "Your Text Here!";
+```
+
+
+Adjust the base text size
+Use the slider or manually change:
+
+ ```java
+float textSizeFactor = 50; // Increase for larger text
+```
+
+
+Change how much text reacts to sound
+Modify:
+
+ ```java
+float amplitudeScale = 200; // Increase for stronger size changes
+```
+
+
+Enable/Disable the glitch effect
+Use the GUI toggle or manually set:
+
+ ```java
+boolean glitchEnabled = true; // Set to false to disable
+```
+
+
+Change glitch intensity
+Modify the values inside applyGlitchEffect():
+
+ ```java
+for (int i = 10; i++) // Increase for more distortion layers
+float xOffset = random(-level * 100, level * 100); // Increase for more shift
+float yOffset = random(-level * 100, level * 100); 
+```
+
+
